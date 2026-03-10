@@ -42,7 +42,7 @@ public class SimpleGame implements ApplicationListener {
         viewport = new FitViewport(8, 5);
         
         bucketSprite = new Sprite(bucketTexture);
-        bucketSprite.setSize(1, 1);
+        bucketSprite.setSize(5, 5);
         
         touchPos = new Vector2();
         
@@ -72,9 +72,9 @@ public class SimpleGame implements ApplicationListener {
         float speed = 4f;
         float delta = Gdx.graphics.getDeltaTime();
 
-        if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+        if (Gdx.input.isKeyPressed(Input.Keys.D)) {
             bucketSprite.translateX(speed * delta);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+        } else if (Gdx.input.isKeyPressed(Input.Keys.A)) {
             bucketSprite.translateX(-speed * delta);
         }
 
